@@ -38,13 +38,11 @@
     .headline-blue{color:var(--primary)}
     .headline-nowrap{white-space:nowrap;display:inline-block;color:#111216}
     #rotating-word{color:inherit;display:inline-block;transform:translateY(0);opacity:1;transition:transform .35s ease, opacity .35s ease}
-        .hero-collage{margin:64px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:940px}
-    .shot{border-radius:0;overflow:hidden;background:#fff;border:1px solid #d3d7e6;box-shadow:0 8px 20px rgba(25,30,52,.08)}
+        .hero-collage{margin:64px auto 0;max-width:940px;overflow:hidden}
+    .hero-track{display:flex;gap:12px;width:max-content;animation:hero-scroll 22s linear infinite}
+    .shot{flex:0 0 210px;aspect-ratio:3 / 4;border-radius:0;overflow:hidden;background:#fff;border:1px solid #d3d7e6;box-shadow:0 8px 20px rgba(25,30,52,.08)}
     .shot img{width:100%;height:100%;object-fit:cover;display:block}
-    .hero-collage .shot{aspect-ratio:3 / 4}
-    .hero-collage .shot:nth-child(2){margin-top:18px}
-    .hero-collage .shot:nth-child(3){margin-top:8px}
-    .hero-collage .shot:nth-child(4){margin-top:22px}
+    @keyframes hero-scroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 6px))}}
 
     .intro{padding:28px 24px;display:flex;justify-content:center}
     .intro p{max-width:760px;text-align:center;color:#5f6473;line-height:1.75;font-size:24px;margin:0}
@@ -91,7 +89,7 @@
     .foot{display:flex;justify-content:space-between;padding:14px 24px 24px;color:#7a7f8f;font-size:12px;border-top:1px solid var(--line)}
 
     @media (max-width:900px){
-      .hero-collage{grid-template-columns:1fr 1fr}
+      .shot{flex:0 0 46vw;max-width:220px}
       .projects{grid-template-columns:1fr}
       .services-wrap{grid-template-columns:1fr}
       .collab{grid-template-columns:1fr}
@@ -123,12 +121,18 @@
       </div>
 
       <header class="hero">
-        <h1><span class="headline-blue">Kompletní digitální řešení<br><span class="headline-nowrap">pro <span id="rotating-word">firmy</span>, které chtějí růst</span></h1>
+        <h1><span class="headline-blue">Kompletní digitální řešení</span><br><span class="headline-nowrap">pro <span id="rotating-word">firmy</span>, které chtějí růst</span></h1>
         <div class="hero-collage">
-          <div class="shot"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
-          <div class="shot"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
-          <div class="shot"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
-          <div class="shot"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+          <div class="hero-track">
+            <div class="shot"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+            <div class="shot"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+            <div class="shot"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+            <div class="shot"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+            <div class="shot"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+            <div class="shot"><img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+            <div class="shot"><img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+            <div class="shot"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="work"/></div>
+          </div>
         </div>
       </header>
 
