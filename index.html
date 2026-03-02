@@ -3,110 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dan Studio | Weby, aplikace, marketing, design a tisk</title>
-  <meta name="description" content="Pomáhám firmám růst díky webům, aplikacím, marketingu, designu a tisku, které fungují jako jeden celek." />
-  <meta property="og:title" content="Dan Studio | Moderní weby a systémy, které fungují" />
-  <meta property="og:description" content="One-stop partner pro web, aplikace, marketing, design i tisk. Cíl: více relevantních poptávek." />
-  <meta property="og:type" content="website" />
+  <title>Dan Studio | Digitál + design + tisk</title>
+  <meta name="description" content="Kompletní služby: weby, aplikace, marketing, design a tisk. Nový moderní vizuál." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#09090b;--bg-soft:#101014;--card:#13131a;--line:#272733;
-      --text:#f5f7ff;--muted:#acb0c0;--accent:#7cffb2;--white:#fff;
-      --r-lg:22px;--r-md:16px;
+      --bg:#f6f7fb;
+      --ink:#111321;
+      --muted:#5e667f;
+      --card:#ffffff;
+      --line:#e3e7f2;
+      --primary:#5b7cfa;
+      --primary-2:#7b5cff;
+      --mint:#14c8a8;
+      --radius:20px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(1100px 580px at 85% -10%,#1a1a26 0%,var(--bg) 55%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+    html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 80% -10%,#dce5ff 0%,#f6f7fb 45%);color:var(--ink);font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
     a{text-decoration:none;color:inherit}
-    .container{max-width:1240px;margin:0 auto;padding:16px}
+    .container{max-width:1200px;margin:0 auto;padding:18px}
 
-    .nav{position:sticky;top:10px;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:rgba(9,9,11,.78);backdrop-filter:blur(10px)}
-    .brand{font:800 12px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase}
-    .menu{display:flex;gap:14px;color:var(--muted);font-size:14px}
-    .menu a:hover{color:#fff}
+    .nav{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:rgba(255,255,255,.78);border:1px solid var(--line);border-radius:14px;backdrop-filter:blur(8px);position:sticky;top:10px;z-index:30}
+    .brand{font:800 12px/1 Space Grotesk,Manrope,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#20253d}
+    .menu{display:flex;gap:14px;font-size:14px;color:var(--muted)}
 
-    .hero{padding:78px 0 44px;border-bottom:1px solid var(--line)}
-    .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
-    h1{margin:0;font-family:Sora,Inter,sans-serif;font-size:clamp(38px,7vw,88px);line-height:.95;letter-spacing:-.03em;max-width:1050px}
-    .lead{max-width:760px;color:#d0d4e2;font-size:clamp(17px,2.1vw,23px);line-height:1.55;margin:22px 0 0}
-    .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:999px;border:1px solid #717790;font-size:14px;font-weight:700;transition:.24s ease}
-    .btn.primary{background:#fff;color:#000;border-color:#fff}
-    .btn.primary:hover{transform:translateY(-2px)}
-    .btn.ghost:hover{border-color:#fff;background:#11131a}
+    .hero{padding:66px 0 24px;display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+    .hero-main,.hero-side{background:var(--card);border:1px solid var(--line);border-radius:var(--radius)}
+    .hero-main{padding:30px}
+    .hero-side{padding:14px;display:grid;gap:10px}
+    .badge{display:inline-block;padding:7px 10px;border-radius:999px;background:#eef2ff;color:#31407d;font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+    h1{font-family:Space Grotesk,Manrope,sans-serif;font-size:clamp(34px,6vw,72px);line-height:.95;letter-spacing:-.03em;margin:14px 0 0;max-width:760px}
+    .lead{font-size:clamp(17px,2.2vw,22px);line-height:1.55;color:#424b66;max-width:700px;margin:16px 0 0}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .btn{padding:12px 16px;border-radius:12px;border:1px solid transparent;font-weight:700;font-size:14px;transition:.22s}
+    .btn.primary{background:linear-gradient(120deg,var(--primary),var(--primary-2));color:#fff}
+    .btn.secondary{background:#fff;border-color:#cfd6ec;color:#2a345f}
+    .btn:hover{transform:translateY(-2px)}
 
-    .trust{padding:24px 0 10px}
-    .trust-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:14px}
-    .logos,.numbers{border:1px solid var(--line);background:var(--bg-soft);border-radius:var(--r-md);padding:16px}
-    .logos-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-    .chip{border:1px solid #3a3e52;padding:8px 12px;border-radius:999px;font-size:13px;color:#d8ddf0}
-    .num-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
-    .num{background:#141824;border:1px solid #30364f;border-radius:12px;padding:12px}
-    .num b{display:block;font-size:24px}
-    .num span{font-size:13px;color:var(--muted)}
+    .mini{padding:14px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,#fff,#f8faff)}
+    .mini b{display:block;font-size:14px;margin-bottom:6px;color:#222a45}
+    .mini p{margin:0;font-size:13px;line-height:1.45;color:#59617c}
 
-    section{padding:56px 0;border-bottom:1px solid var(--line)}
-    .head{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start;margin-bottom:22px}
-    h2{margin:0;font-family:Sora,Inter,sans-serif;font-size:clamp(28px,4.3vw,56px);line-height:1.03;letter-spacing:-.02em;max-width:900px}
+    section{padding:54px 0;border-bottom:1px solid #e6eaf5}
+    .head{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start;margin-bottom:20px}
+    .kicker{font-size:12px;color:#5f6783;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+    h2{margin:0;font-family:Space Grotesk,Manrope,sans-serif;font-size:clamp(28px,4vw,52px);line-height:1.03;letter-spacing:-.02em;max-width:860px}
 
     .services{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
-    .card{background:linear-gradient(180deg,#14141c,#101018);border:1px solid var(--line);border-radius:var(--r-md);padding:18px}
-    .card h3{margin:0 0 8px;font-size:20px}
-    .card p{margin:0;color:#d2d7e7;line-height:1.5;font-size:14px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(36,55,127,.06)}
+    .card h3{margin:0 0 8px;font-size:18px;color:#1f2743}
+    .card p{margin:0;color:#525d7e;line-height:1.5;font-size:14px}
 
-    .why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .why .card b{display:block;margin-bottom:6px}
+    .clients{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .thumb{aspect-ratio:16/10;border-radius:12px;overflow:hidden;margin-bottom:10px;border:1px solid #d4dcf3}
+    .thumb img{width:100%;height:100%;object-fit:cover;filter:saturate(1.1)}
+    .link{display:inline-block;margin-top:8px;font-size:14px;color:#3d56b2;border-bottom:1px solid #90a0da}
 
-    .refs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-    .ref-img{aspect-ratio:16/10;border-radius:12px;border:1px solid #34384b;overflow:hidden;margin-bottom:10px}
-    .ref-img img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:.4s}
-    .card:hover .ref-img img{filter:grayscale(25%);transform:scale(1.03)}
-    .link{display:inline-block;margin-top:8px;border-bottom:1px solid #8e95b0;font-size:14px}
+    .process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+    .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}
+    .num{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#eef2ff;color:#33408b;font-weight:800;font-size:12px;margin-bottom:8px}
+    .step b{display:block;margin-bottom:6px;color:#232b48}
+    .step p{margin:0;color:#5d6683;font-size:14px}
 
-    .process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-    .step{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:16px}
-    .step .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid #697091;font-size:12px;color:#d7defb;margin-bottom:8px}
-    .step b{display:block;margin-bottom:6px}
-    .step p{margin:0;color:var(--muted);font-size:14px}
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px}
+    summary{cursor:pointer;font-weight:700;color:#232b48}
+    details p{margin:8px 0 0;color:#5b6482;font-size:14px}
 
-    .faq{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    details{background:var(--bg-soft);border:1px solid var(--line);border-radius:12px;padding:14px}
-    summary{cursor:pointer;font-weight:600}
-    details p{margin:10px 0 0;color:#c9cede;font-size:14px}
+    .final{padding:56px 0 70px}
+    .final-box{background:linear-gradient(135deg,#eef2ff,#ecfff9);border:1px solid #cfdaff;border-radius:22px;padding:20px}
+    .form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+    .full{grid-column:1/-1}
+    input,textarea,select{width:100%;padding:12px;border:1px solid #cfd7ef;border-radius:12px;background:#fff;color:#202848;font:500 14px Manrope,sans-serif}
+    textarea{min-height:110px;resize:vertical}
 
-    .final{padding:60px 0 74px}
-    .final-box{border:1px solid var(--line);border-radius:var(--r-lg);background:linear-gradient(180deg,#13131b,#0d0e14);padding:24px}
-    .form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
-    .form .full{grid-column:1/-1}
-    input,textarea,select{width:100%;padding:13px 14px;border-radius:12px;border:1px solid #353a50;background:#0f111a;color:#eef2ff;font:500 14px Inter,sans-serif}
-    input::placeholder,textarea::placeholder{color:#8f95ad}
-    textarea{min-height:120px;resize:vertical}
-    .note{font-size:12px;color:#949ab5;margin-top:8px}
-
-    .reveal{opacity:0;transform:translateY(20px);transition:all .65s cubic-bezier(.2,.7,.2,1)}
+    .reveal{opacity:0;transform:translateY(18px);transition:all .55s ease}
     .reveal.show{opacity:1;transform:none}
-    footer{padding:16px 0 30px;color:#8d92ab;font-size:13px}
+    footer{padding:16px 0 30px;color:#6c7390;font-size:13px}
 
-    @media (max-width:1100px){
-      .services{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .refs{grid-template-columns:1fr}
-      .why{grid-template-columns:1fr}
-    }
-    @media (max-width:900px){
-      .menu{display:none}
-      .trust-grid,.head{grid-template-columns:1fr}
-      .process{grid-template-columns:1fr 1fr}
-      .faq{grid-template-columns:1fr}
-      .form{grid-template-columns:1fr}
-    }
-    @media (max-width:620px){
-      .container{padding:12px}
-      .hero{padding-top:60px}
-      .process{grid-template-columns:1fr}
-      .services{grid-template-columns:1fr}
-    }
+    @media (max-width:1024px){.services{grid-template-columns:repeat(2,minmax(0,1fr))}.clients{grid-template-columns:1fr}.hero{grid-template-columns:1fr}}
+    @media (max-width:860px){.menu{display:none}.head{grid-template-columns:1fr}.process{grid-template-columns:1fr 1fr}.faq{grid-template-columns:1fr}.form{grid-template-columns:1fr}}
+    @media (max-width:620px){.container{padding:12px}.services{grid-template-columns:1fr}.process{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -122,42 +101,26 @@
       </div>
     </nav>
 
-    <header class="hero reveal" id="domu">
-      <div class="kicker">[01 Hero]</div>
-      <h1>Weby a systémy, které přivádí poptávky, ne jen návštěvy.</h1>
-      <p class="lead">Pomáhám firmám růst díky webům, aplikacím, marketingu, designu a tisku, které fungují jako jeden celek.</p>
-      <div class="cta">
-        <a class="btn primary" href="#kontakt">Nezávazná konzultace</a>
-        <a class="btn ghost" href="#reference">Zobrazit reference</a>
+    <header class="hero reveal">
+      <div class="hero-main">
+        <span class="badge">Nový vizuální směr</span>
+        <h1>Digitální růst, který je vidět. Online i offline.</h1>
+        <p class="lead">Pomáhám firmám růst díky webům, aplikacím, marketingu, designu a tisku, které fungují jako jeden celek.</p>
+        <div class="cta">
+          <a class="btn primary" href="#kontakt">Nezávazná konzultace</a>
+          <a class="btn secondary" href="#reference">Zobrazit reference</a>
+        </div>
       </div>
+      <aside class="hero-side">
+        <div class="mini"><b>Web + app</b><p>Rychlý, moderní, conversion-first základ.</p></div>
+        <div class="mini"><b>Marketing + design</b><p>Jasná komunikace, která přivádí relevantní poptávky.</p></div>
+        <div class="mini"><b>Tiskové služby</b><p>Od návrhu po realizaci v jednotném stylu značky.</p></div>
+      </aside>
     </header>
-
-    <div class="trust reveal">
-      <div class="trust-grid">
-        <div class="logos">
-          <div class="kicker">Důvěryhodnost</div>
-          <strong>Vybrané projekty / klienti</strong>
-          <div class="logos-list">
-            <span class="chip">Vrakfest</span>
-            <span class="chip">Hibrace</span>
-            <span class="chip">Fišer & Partners</span>
-          </div>
-        </div>
-        <div class="numbers">
-          <div class="kicker">Výsledkový mindset</div>
-          <div class="num-grid">
-            <div class="num"><b>5</b><span>hlavních oblastí služeb</span></div>
-            <div class="num"><b>360°</b><span>online + offline řešení</span></div>
-            <div class="num"><b>End-to-End</b><span>od návrhu po realizaci</span></div>
-            <div class="num"><b>1 partner</b><span>méně chaosu, rychlejší exekuce</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <section id="sluzby" class="reveal">
       <div class="head">
-        <div class="kicker">[02 Services]</div>
+        <div class="kicker">[Služby]</div>
         <h2>Pět služeb, jedna strategie: růst značky a více relevantních poptávek.</h2>
       </div>
       <div class="services">
@@ -167,44 +130,28 @@
         <article class="card"><h3>Design</h3><p>Vizuální identita a kreativa, které zvyšují důvěru a odlišují vás od konkurence.</p></article>
         <article class="card"><h3>Tiskařské služby</h3><p>Od návrhu po hotový tisk — letáky, vizitky, bannery, samolepky i další produkce.</p></article>
       </div>
-      <div class="cta" style="margin-top:16px">
-        <a class="btn primary" href="#kontakt">Chci nabídku</a>
-        <a class="btn ghost" href="#kontakt">Poptat konkrétní službu</a>
-      </div>
-    </section>
-
-    <section class="reveal">
-      <div class="head">
-        <div class="kicker">[03 Proč právě já]</div>
-        <h2>Ne izolované služby. Kompletní růstový systém značky.</h2>
-      </div>
-      <div class="why">
-        <article class="card"><b>Strategie + realizace</b><p>Nejen návrh. Dostaneš i skutečnou exekuci a dotažení do výsledku.</p></article>
-        <article class="card"><b>One-stop řešení</b><p>Web, aplikace, marketing, design i tisk v jednom toku bez přehazování odpovědnosti.</p></article>
-        <article class="card"><b>Conversion-first přístup</b><p>Každý prvek webu je navržený tak, aby podporoval poptávku a důvěru.</p></article>
-      </div>
     </section>
 
     <section id="reference" class="reveal">
       <div class="head">
-        <div class="kicker">[04 Reference]</div>
+        <div class="kicker">[Reference]</div>
         <h2>Reálné realizace a konkrétní výstupy</h2>
       </div>
-      <div class="refs">
+      <div class="clients">
         <article class="card">
-          <div class="ref-img"><img src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=1200&q=80" alt="Vrakfest"></div>
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=1200&q=80" alt="Vrakfest"></div>
           <h3>Vrakfest</h3>
           <p>Vytvořena kompletní webová stránka, vytvoření databáze a práce s live daty, plus vytvoření aplikace pro jezdce, diváky a organizaci Vrakfestu.</p>
           <a class="link" href="https://www.vrakfest.cz" target="_blank" rel="noopener">www.vrakfest.cz</a>
         </article>
         <article class="card">
-          <div class="ref-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Hibrace"></div>
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="Hibrace"></div>
           <h3>Hibrace</h3>
           <p>Vytvořena kompletní webová stránka včetně vytvoření rezervačního formuláře.</p>
           <a class="link" href="https://hibrace.cz" target="_blank" rel="noopener">hibrace.cz</a>
         </article>
         <article class="card">
-          <div class="ref-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" alt="Fišer & Partners"></div>
+          <div class="thumb"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80" alt="Fišer & Partners"></div>
           <h3>Fišer & Partners</h3>
           <p>Vytvořena kompletní webová stránka včetně napojení na realitní portál Urbium.</p>
           <a class="link" href="https://fiserpartners.cz" target="_blank" rel="noopener">fiserpartners.cz</a>
@@ -214,63 +161,52 @@
 
     <section id="proces" class="reveal">
       <div class="head">
-        <div class="kicker">[05 Proces]</div>
-        <h2>No guesswork. Jasná cesta od zadání po výsledek.</h2>
+        <div class="kicker">[Proces]</div>
+        <h2>Jasná cesta od zadání po výsledek.</h2>
       </div>
       <div class="process">
-        <article class="step"><span class="n">01</span><b>Brief</b><p>Cíle, priority, rozpočet, časový rámec.</p></article>
-        <article class="step"><span class="n">02</span><b>Návrh řešení</b><p>Struktura, UX, scope a plán realizace.</p></article>
-        <article class="step"><span class="n">03</span><b>Realizace</b><p>Design, vývoj, obsah, integrace a testování.</p></article>
-        <article class="step"><span class="n">04</span><b>Spuštění & růst</b><p>Nasazení, měření, iterace a zlepšování výkonu.</p></article>
+        <article class="step"><div class="num">01</div><b>Brief</b><p>Cíle, priority, rozpočet, časový rámec.</p></article>
+        <article class="step"><div class="num">02</div><b>Návrh řešení</b><p>Struktura, UX, scope a plán realizace.</p></article>
+        <article class="step"><div class="num">03</div><b>Realizace</b><p>Design, vývoj, obsah, integrace a testování.</p></article>
+        <article class="step"><div class="num">04</div><b>Spuštění & růst</b><p>Nasazení, měření, iterace a zlepšování výkonu.</p></article>
       </div>
     </section>
 
     <section id="faq" class="reveal">
       <div class="head">
-        <div class="kicker">[06 FAQ]</div>
-        <h2>Smarter decisions start with clear answers.</h2>
+        <div class="kicker">[FAQ]</div>
+        <h2>Jasné odpovědi před začátkem spolupráce.</h2>
       </div>
       <div class="faq">
-        <details><summary>Jak rychle umíš začít projekt?</summary><p>Typicky do několika dní po schválení zadání a rozsahu. Menší projekty zvládneme startovat velmi rychle.</p></details>
-        <details><summary>Děláš i jen jednu službu (např. jen web)?</summary><p>Ano. Můžeš využít jednotlivou službu nebo kompletní balíček podle potřeby.</p></details>
-        <details><summary>Umíš převzít i starší web a vylepšit ho?</summary><p>Ano, dělám redesign, optimalizaci konverzí, výkonu i UX bez nutnosti vše stavět od nuly.</p></details>
-        <details><summary>Jak funguje cena?</summary><p>Nabízím orientační balíčky i individuální nacenění podle cíle, rozsahu a termínu.</p></details>
-        <details><summary>Řešíš i správu po spuštění?</summary><p>Ano. Po launchi můžeme navázat dlouhodobou spoluprací na marketingu, obsahu a optimalizaci.</p></details>
-        <details><summary>Za jak dlouho odpovídáš na poptávku?</summary><p>Na většinu poptávek odpovídám do 24 hodin v pracovní dny.</p></details>
+        <details><summary>Jak rychle umíš začít projekt?</summary><p>Typicky do několika dní po schválení zadání a rozsahu.</p></details>
+        <details><summary>Děláš i jen jednu službu?</summary><p>Ano, můžeš využít jednotlivou službu nebo kompletní balíček.</p></details>
+        <details><summary>Jak funguje cena?</summary><p>Orientační balíčky + individuální nacenění dle cíle a rozsahu.</p></details>
+        <details><summary>Za jak dlouho odpovídáš?</summary><p>Na většinu poptávek odpovídám do 24 hodin v pracovní dny.</p></details>
       </div>
     </section>
 
     <section id="kontakt" class="final reveal">
       <div class="final-box">
-        <div class="kicker">[07 Kontakt]</div>
+        <div class="kicker">[Kontakt]</div>
         <h2 style="margin:0 0 10px">Připravený posunout značku na další úroveň?</h2>
-        <p style="margin:0;color:#cfd4e6;max-width:760px">Napiš krátce, co potřebuješ. Vrátím se ti s konkrétním návrhem řešení a dalším krokem.</p>
-
+        <p style="margin:0;color:#4e5877;max-width:760px">Napiš krátce, co potřebuješ. Vrátím se ti s konkrétním návrhem řešení a dalším krokem.</p>
         <form class="form" onsubmit="event.preventDefault(); alert('Děkuji, poptávka dorazila. Odpovím vám do 24 hodin.');">
           <input type="text" placeholder="Vaše jméno" required>
           <input type="email" placeholder="E-mail pro odpověď" required>
           <input type="tel" placeholder="Telefon (volitelné)">
-          <select>
-            <option>Co potřebujete vytvořit?</option>
-            <option>Webová stránka</option>
-            <option>Webová aplikace</option>
-            <option>Marketing</option>
-            <option>Design</option>
-            <option>Tiskové služby</option>
-          </select>
+          <select><option>Co potřebujete vytvořit?</option><option>Webová stránka</option><option>Webová aplikace</option><option>Marketing</option><option>Design</option><option>Tiskové služby</option></select>
           <textarea class="full" placeholder="Popište stručně váš cíl"></textarea>
           <button class="btn primary full" type="submit">Odeslat poptávku</button>
         </form>
-        <div class="note">Odesláním souhlasíte se zpracováním údajů pro účely kontaktování.</div>
       </div>
     </section>
 
-    <footer>© <span id="y"></span> Dan Studio • High-end conversion-first landing</footer>
+    <footer>© <span id="y"></span> Dan Studio • Fresh visual direction</footer>
   </div>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show');});},{threshold:.12});
+    document.getElementById('y').textContent=new Date().getFullYear();
+    const io=new IntersectionObserver((entries)=>entries.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.14});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
   </script>
 </body>
