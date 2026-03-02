@@ -7,87 +7,104 @@
   <meta name="description" content="Moderní studio pro weby, aplikace, automatizace, marketing, design a tisková řešení." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#050505;
-      --bg-soft:#0d0d0f;
-      --card:#121214;
-      --line:#26262a;
-      --text:#f5f5f7;
-      --muted:#aaaaaf;
-      --accent:#ffffff;
-      --radius:20px;
-      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --bg:#050506;
+      --bg2:#0d0d11;
+      --card:#121217;
+      --line:#27272f;
+      --text:#f7f7fb;
+      --muted:#a5a5b1;
+      --white:#fff;
+      --radius:22px;
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:radial-gradient(1200px 500px at 80% -10%,#1a1a1f 0%,var(--bg) 50%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
-    img{max-width:100%;display:block}
+    html,body{margin:0;padding:0;background:radial-gradient(1000px 500px at 85% -20%,#1d1d27 0%,var(--bg) 40%);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
     a{text-decoration:none;color:inherit}
+    .container{max-width:1240px;margin:0 auto;padding:18px}
 
-    .container{max-width:1200px;margin:0 auto;padding:22px}
-    .nav{position:sticky;top:0;z-index:30;backdrop-filter:blur(8px);background:rgba(5,5,5,.7);border:1px solid var(--line);border-radius:16px;margin-top:12px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between}
-    .brand{font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
-    .links{display:flex;gap:14px;color:var(--muted);font-size:14px}
-    .links a:hover{color:#fff}
+    .nav{
+      position:sticky;top:12px;z-index:60;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:12px 16px;border:1px solid var(--line);border-radius:14px;
+      background:rgba(8,8,12,.72);backdrop-filter:blur(10px)
+    }
+    .brand{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:800}
+    .menu{display:flex;gap:14px;color:var(--muted);font-size:14px}
+    .menu a:hover{color:#fff}
 
-    .hero{padding:82px 0 50px}
-    .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-    h1{font-size:clamp(38px,7vw,94px);line-height:.95;letter-spacing:-.03em;margin:0;max-width:1000px}
-    .lead{max-width:760px;color:#cbcbcf;font-size:clamp(17px,2.1vw,22px);line-height:1.55;margin:22px 0 0}
-    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
-    .btn{padding:12px 18px;border-radius:999px;border:1px solid #8a8a90;font-weight:600;font-size:14px;transition:.25s ease}
+    .hero{padding:82px 0 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+    .hero-main,.hero-side{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,#101017,#0b0b10)}
+    .hero-main{padding:34px}
+    .hero-side{padding:20px;display:grid;gap:12px}
+    .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+    h1{font-size:clamp(38px,6.3vw,84px);line-height:.94;letter-spacing:-.03em;margin:0}
+    .lead{max-width:760px;color:#cfcfda;font-size:clamp(17px,2vw,22px);line-height:1.55;margin:20px 0 0}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+    .btn{padding:12px 16px;border-radius:999px;font-weight:700;font-size:14px;border:1px solid #7d7d8a;transition:.25s}
     .btn.primary{background:#fff;color:#000;border-color:#fff}
     .btn.primary:hover{transform:translateY(-2px)}
-    .btn.ghost:hover{border-color:#fff;background:#111}
+    .btn.ghost:hover{border-color:#fff;background:#121217}
 
-    .section{padding:58px 0;border-top:1px solid var(--line)}
+    .mini{border:1px solid var(--line);border-radius:16px;padding:14px;background:#0e0e14}
+    .mini b{display:block;font-size:14px;margin-bottom:6px}
+    .mini p{margin:0;color:var(--muted);font-size:13px;line-height:1.45}
+
+    .marquee-wrap{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0;margin:4px 0 0}
+    .marquee{display:flex;gap:42px;white-space:nowrap;animation:run 28s linear infinite;color:#d9d9e2;font-weight:600}
+    @keyframes run{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    .section{padding:56px 0;border-bottom:1px solid var(--line)}
     .section-head{display:grid;grid-template-columns:220px 1fr;gap:20px;align-items:start;margin-bottom:24px}
     .kicker{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
-    h2{font-size:clamp(28px,4.2vw,56px);line-height:1.02;letter-spacing:-.025em;margin:0;max-width:860px}
+    h2{font-size:clamp(28px,3.8vw,54px);line-height:1.04;letter-spacing:-.02em;margin:0;max-width:920px}
 
-    .services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-    .card{background:linear-gradient(180deg,#121214,#0d0d10);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+    .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .card{background:linear-gradient(180deg,#111118,#0d0d13);border:1px solid var(--line);border-radius:20px;padding:22px}
     .card h3{margin:0 0 10px;font-size:24px;letter-spacing:-.01em}
-    .card ul{margin:0;padding-left:18px;color:#d7d7db;line-height:1.55}
+    .card ul{margin:0;padding-left:18px;color:#d8d8e1;line-height:1.55}
+    .s1{grid-column:span 4}.s2{grid-column:span 4}.s3{grid-column:span 4}
 
     .projects{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-    .project .thumb{aspect-ratio:16/10;border-radius:14px;border:1px solid #323238;background:linear-gradient(140deg,#1a1a1f,#0b0b0d);display:grid;place-items:center;margin-bottom:14px;overflow:hidden}
-    .project .thumb img{opacity:.88;mix-blend:screen}
+    .project .image{aspect-ratio:16/10;border-radius:14px;border:1px solid #343441;overflow:hidden;margin-bottom:14px}
+    .project img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:.45s}
+    .project:hover img{transform:scale(1.04);filter:grayscale(20%)}
     .project h3{margin:0 0 10px;font-size:24px}
-    .project p{margin:0 0 12px;color:#d4d4d8;line-height:1.55}
-    .project a{font-size:14px;border-bottom:1px solid #888;padding-bottom:2px}
+    .project p{margin:0 0 12px;color:#d3d3dd;line-height:1.55}
+    .project a{font-size:14px;border-bottom:1px solid #8b8b97;padding-bottom:2px}
 
-    .workflow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-    .step{padding:18px;border-radius:14px;border:1px solid var(--line);background:var(--bg-soft)}
-    .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;border:1px solid #666;font-size:12px;color:#ddd;margin-bottom:10px}
+    .timeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .step{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--bg2)}
+    .step .num{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:999px;border:1px solid #676774;font-size:12px;margin-bottom:8px;color:#ddd}
     .step b{display:block;font-size:18px;margin-bottom:6px}
     .step p{margin:0;color:var(--muted)}
 
-    .about{display:grid;grid-template-columns:1.2fr .8fr;gap:14px}
-    .about p{color:#d3d3d7;line-height:1.6}
+    .about{display:grid;grid-template-columns:1.25fr .75fr;gap:14px}
+    .about p{margin:0;color:#d2d2db;line-height:1.6}
 
-    .contact{padding:64px 0 76px}
-    .contact-box{border:1px solid var(--line);border-radius:24px;padding:28px;background:linear-gradient(180deg,#111,#0a0a0c)}
-    .contact-box h2{margin-bottom:12px}
-    .contact-box p{color:#d0d0d5;max-width:760px}
+    .contact{padding:60px 0 74px}
+    .contact-box{border:1px solid var(--line);border-radius:24px;padding:28px;background:linear-gradient(180deg,#111118,#09090d)}
+    .contact-box p{color:#d1d1d9;max-width:760px}
 
-    .reveal{opacity:0;transform:translateY(24px);transition:all .7s cubic-bezier(.2,.7,.2,1)}
+    .reveal{opacity:0;transform:translateY(24px);transition:all .65s cubic-bezier(.2,.7,.2,1)}
     .reveal.show{opacity:1;transform:none}
 
-    footer{border-top:1px solid var(--line);padding:18px 0 36px;color:#8d8d92;font-size:13px}
+    footer{padding:16px 0 34px;color:#8d8d98;font-size:13px}
 
     @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
       .section-head{grid-template-columns:1fr;gap:10px}
-      .services,.projects{grid-template-columns:1fr}
-      .workflow{grid-template-columns:1fr 1fr}
+      .s1,.s2,.s3{grid-column:span 12}
+      .projects{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr 1fr}
       .about{grid-template-columns:1fr}
-      .links{display:none}
+      .menu{display:none}
     }
     @media (max-width:640px){
-      .container{padding:16px}
-      .hero{padding:58px 0 34px}
-      .workflow{grid-template-columns:1fr}
+      .timeline{grid-template-columns:1fr}
+      .container{padding:14px}
+      .hero-main{padding:24px}
     }
   </style>
 </head>
@@ -95,31 +112,45 @@
   <div class="container">
     <nav class="nav reveal">
       <div class="brand">Dan Studio</div>
-      <div class="links">
+      <div class="menu">
         <a href="#sluzby">Služby</a>
         <a href="#projekty">Klienti</a>
-        <a href="#workflow">Postup</a>
+        <a href="#workflow">Workflow</a>
         <a href="#kontakt">Kontakt</a>
       </div>
     </nav>
 
     <header class="hero reveal">
-      <div class="eyebrow">[01 Hero]</div>
-      <h1>Moderní weby a systémy, které nejsou jen hezké — ale hlavně fungují.</h1>
-      <p class="lead">Dělám weby, aplikace, automatizace, marketing, sociální sítě, design i tisk. Jeden partner, kompletní řešení, měřitelný výsledek.</p>
-      <div class="cta">
-        <a class="btn primary" href="#kontakt">Domluvit konzultaci</a>
-        <a class="btn ghost" href="#projekty">Zobrazit realizace</a>
+      <div class="hero-main">
+        <div class="eyebrow">[01 Hero]</div>
+        <h1>Moderní weby a systémy, které nejsou jen hezké — ale hlavně fungují.</h1>
+        <p class="lead">Dělám weby, aplikace, automatizace, marketing, sociální sítě, design i tisk. Jeden partner, kompletní řešení, měřitelný výsledek.</p>
+        <div class="cta">
+          <a class="btn primary" href="#kontakt">Domluvit konzultaci</a>
+          <a class="btn ghost" href="#projekty">Zobrazit realizace</a>
+        </div>
       </div>
+      <aside class="hero-side">
+        <div class="mini"><b>Weby & Aplikace</b><p>Od prezentačních webů po interní nástroje a aplikace na míru.</p></div>
+        <div class="mini"><b>Marketing & Design</b><p>Obsah, vizuál a výkon jedním směrem: více relevantních poptávek.</p></div>
+        <div class="mini"><b>Tisk & Produkce</b><p>Kompletní tisková podpora od návrhu až po fyzickou realizaci.</p></div>
+      </aside>
     </header>
+
+    <div class="marquee-wrap reveal">
+      <div class="marquee">
+        <span>Weby</span><span>Aplikace</span><span>Automatizace</span><span>Marketing</span><span>Sociální sítě</span><span>Grafický design</span><span>Animace</span><span>Tisk</span>
+        <span>Weby</span><span>Aplikace</span><span>Automatizace</span><span>Marketing</span><span>Sociální sítě</span><span>Grafický design</span><span>Animace</span><span>Tisk</span>
+      </div>
+    </div>
 
     <section class="section reveal" id="sluzby">
       <div class="section-head">
         <div class="kicker">[02 Services]</div>
         <h2>Tři silné pilíře, které pokryjí online i offline růst.</h2>
       </div>
-      <div class="services">
-        <article class="card">
+      <div class="bento">
+        <article class="card s1">
           <h3>Weby & Aplikace</h3>
           <ul>
             <li>Firemní weby, landing pages, e‑commerce</li>
@@ -128,7 +159,7 @@
             <li>Automatizace a integrace (n8n)</li>
           </ul>
         </article>
-        <article class="card">
+        <article class="card s2">
           <h3>Marketing & Design</h3>
           <ul>
             <li>Marketingová strategie a obsah</li>
@@ -137,7 +168,7 @@
             <li>Animace a video vizuály</li>
           </ul>
         </article>
-        <article class="card">
+        <article class="card s3">
           <h3>Tisk & Produkce</h3>
           <ul>
             <li>Letáky, vizitky, katalogy</li>
@@ -156,25 +187,19 @@
       </div>
       <div class="projects">
         <article class="card project">
-          <div class="thumb">
-            <img alt="Vrakfest visual" src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=900&q=80" />
-          </div>
+          <div class="image"><img alt="Vrakfest" src="https://images.unsplash.com/photo-1539185441755-769473a23570?auto=format&fit=crop&w=1200&q=80"></div>
           <h3>Vrakfest</h3>
           <p>Vytvořena kompletní webová stránka, vytvoření databáze a práce s live daty, plus vytvoření aplikace pro jezdce, diváky a organizaci Vrakfestu.</p>
           <a href="https://www.vrakfest.cz" target="_blank" rel="noopener">www.vrakfest.cz</a>
         </article>
         <article class="card project">
-          <div class="thumb">
-            <img alt="Hibrace visual" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" />
-          </div>
+          <div class="image"><img alt="Hibrace" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"></div>
           <h3>Hibrace</h3>
           <p>Vytvořena kompletní webová stránka včetně vytvoření rezervačního formuláře.</p>
           <a href="https://hibrace.cz" target="_blank" rel="noopener">hibrace.cz</a>
         </article>
         <article class="card project">
-          <div class="thumb">
-            <img alt="Fišer & Partners visual" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=900&q=80" />
-          </div>
+          <div class="image"><img alt="Fišer & Partners" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80"></div>
           <h3>Fišer & Partners</h3>
           <p>Vytvořena kompletní webová stránka včetně napojení na realitní portál Urbium.</p>
           <a href="https://fiserpartners.cz" target="_blank" rel="noopener">fiserpartners.cz</a>
@@ -187,7 +212,7 @@
         <div class="kicker">[04 Workflow]</div>
         <h2>Od první myšlenky po finální výsledek bez chaosu.</h2>
       </div>
-      <div class="workflow">
+      <div class="timeline">
         <div class="step"><span class="num">01</span><b>Brief</b><p>Zadání, cíle, rozpočet a priority.</p></div>
         <div class="step"><span class="num">02</span><b>Návrh</b><p>Struktura, obsah, UX a směr designu.</p></div>
         <div class="step"><span class="num">03</span><b>Realizace</b><p>Vývoj, grafika, integrace, testování.</p></div>
@@ -201,12 +226,8 @@
         <h2>Nejen „dodavatel“. Partner pro růst značky.</h2>
       </div>
       <div class="about">
-        <div class="card">
-          <p>Spojuju techniku, marketing a design do jednoho funkčního celku. Cíl je jednoduchý: aby tvoje značka byla vidět, působila důvěryhodně a přinášela reálné obchodní výsledky.</p>
-        </div>
-        <div class="card">
-          <p><strong>Specializace:</strong><br>Weby • Aplikace • Automatizace • Sítě • Grafika • Tisk</p>
-        </div>
+        <article class="card"><p>Spojuju techniku, marketing a design do jednoho funkčního celku. Cíl je jednoduchý: aby tvoje značka byla vidět, působila důvěryhodně a přinášela reálné obchodní výsledky.</p></article>
+        <article class="card"><p><strong>Specializace:</strong><br>Weby • Aplikace • Automatizace • Sítě • Grafika • Tisk</p></article>
       </div>
     </section>
 
@@ -228,8 +249,8 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
     const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('show'); });
-    },{threshold:.14});
+      entries.forEach(entry=>{ if(entry.isIntersecting) entry.target.classList.add('show'); });
+    },{threshold:.15});
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   </script>
 </body>
